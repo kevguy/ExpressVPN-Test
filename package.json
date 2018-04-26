@@ -1,0 +1,32 @@
+{
+  "name": "ExpressVPN-Test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Kev Lai",
+  "license": "MIT",
+  "scripts": {
+    "test": "cross-env NODE_ENV=dev jest --forceExit"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json"
+    ],
+    "verbose": true,
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "testMatch": [
+      "**/src/**/__tests__/**/*.(js)"
+    ],
+    "testEnvironment": "node"
+  },
+  "dependencies": {
+    "cross-env": "^5.1.4",
+    "isomorphic-fetch": "^2.2.1"
+  },
+  "devDependencies": {
+    "babel-jest": "^22.4.3",
+    "jest": "^22.4.3"
+  }
+}
