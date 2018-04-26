@@ -1,5 +1,10 @@
 const fetch = require('isomorphic-fetch')
 
+/**
+ * Get data from placeholder API using fetch
+ * @param {number} pageNo the page number
+ * @returns {Object | Error} retrieved data or error
+ */
 async function fetchStuff(pageNo) {
   const url = `https://jsonplaceholder.typicode.com/posts/${pageNo}`
 
@@ -21,6 +26,11 @@ async function fetchStuff(pageNo) {
   }
 }
 
+/**
+ * Post data to placeholder API using fetch
+ * @param {Object} item the data-to-be-sent
+ * @returns {Object | Error} response or error
+ */
 async function postStuff(item) {
   const url = `https://jsonplaceholder.typicode.com/posts`
 
